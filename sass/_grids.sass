@@ -1,0 +1,12 @@
+@import susy
+  
+// Susy Grid 
+$susy: ( columns: 12,gutters: 1/5,container: 100%,math: fluid,output: float,gutter-position: after, debug: ( image: hide,color: rgba(#f21, .5),output: background,toggle: top right),)
+
+// Grid Rules
+body
+  +container()
+
+.gallary
+  +span(10)
+  +push(1)
