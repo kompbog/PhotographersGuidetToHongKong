@@ -78,7 +78,6 @@ main {
 
 #line {
   background: #22394d;
-  height: 100vh;
   width: 8px;
   left: 50%;
   top: 0;
@@ -100,8 +99,7 @@ main {
 
 .scrin {
   width: 100%;
-  height: 100vh;
-  z-index: 2;
+  z-index: 1;
 }
 
 .text {
@@ -250,6 +248,7 @@ main {
   background: #000;
   max-height: 80%;
   max-width: 100%;
+  z-index: 1;
 }
 .gallary__photo {
   width: 100%;
@@ -267,7 +266,6 @@ main {
 .gallary__btn_map {
   background: #0178D9;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  z-index: 3;
 }
 .gallary__btn_back {
   background: #212121;
