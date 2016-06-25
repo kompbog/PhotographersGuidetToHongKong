@@ -84,7 +84,6 @@ body
 .shadowMap
   +background-image (linear-gradient($bgColor ,rgba($bgColor, 0)))
   width: 100%
-  height: 5rem
   z-index: 0
   
 .shadow
@@ -165,14 +164,22 @@ body
 ////////////////////////////////////
 .station
   left: 50%
-  margin-left: -12px
-  width: 24px
-  height: 24px
+  margin-left: -0.9rem
+  width: 1.8rem
+  height: 1.8rem
   border-radius: 50%
-  background: lighten($lineBot, 20%)
+  background: $lineBot
+  position: absolute
+  //background: lighten($lineBot, 20%)
   z-index: 1
   &--shamShuiPo
-    margin-top: 260px
+    top: 10%
+  &--mongKok
+    top: 32.25%
+  &--tsimShaTsui
+    top: 58.25%
+  &--central
+    top: 90%
 
 //////////////////////////////////////
 /////////////- GALLARY -/////////////

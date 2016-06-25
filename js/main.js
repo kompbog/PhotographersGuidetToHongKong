@@ -7,7 +7,6 @@
   scrinH(); 
   $(window).resize(scrinH); 
   
-  
   function conentH(){ 
     var multiplier;
     if($(window).width() < 384) {
@@ -22,5 +21,17 @@
   conentH(); 
   $(window).resize(conentH); 
 
+  function shadowH(){ 
+    var multiplier;
+    if($(window).width() < 384) {
+      multiplier = 0.30692;
+    } else {
+      multiplier = 0.21176;
+    }
+    var mapShadowH = $("#main").height() * multiplier; 
+    $(".shadowMap").css("height", mapShadowH +"px") 
+  } 
+  shadowH(); 
+  $(window).resize(shadowH);
 
 })(jQuery);
