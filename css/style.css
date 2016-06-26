@@ -235,13 +235,8 @@ body {
 }
 
 .station {
-  left: 50%;
-  margin-left: -0.9rem;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  background: #2196F3;
   position: absolute;
+  width: 100%;
   z-index: 1;
 }
 .station--shamShuiPo {
@@ -255,6 +250,19 @@ body {
 }
 .station--central {
   top: 90%;
+}
+.station__name {
+  margin-top: -1.3533834587rem;
+  z-index: 1;
+  text-align: right;
+}
+.station__btn {
+  left: 50%;
+  margin-left: -0.9rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #2196F3;
 }
 
 .gallary {
@@ -296,13 +304,21 @@ h2 {
   font-size: 1.429rem;
   font-family: Open Sans Bold;
   font-weight: bold;
+  letter-spacing: 0.005rem;
+}
+
+.station__name {
+  font-size: 1.429rem;
+  font-family: Open Sans Bold;
+  font-weight: bold;
   letter-spacing: 0.005em;
+  text-shadow: 0 0.143rem 0.286rem #000;
 }
 
 .gallary__btn_map, .gallary__btn_back {
   font-family: Open Sans Bold;
   font-weight: bold;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.01rem;
 }
 
 .gallary__btn_map {
@@ -329,4 +345,10 @@ body:after {
   float: left;
   margin-right: 1.4084507042%;
   margin-left: 8.4507042254%;
+}
+
+.station__name {
+  width: 45.0704225352%;
+  float: left;
+  margin-right: 1.4084507042%;
 }

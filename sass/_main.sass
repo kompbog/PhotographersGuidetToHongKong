@@ -163,13 +163,8 @@ body
 /////////////- STATION -/////////////
 ////////////////////////////////////
 .station
-  left: 50%
-  margin-left: -0.9rem
-  width: 1.8rem
-  height: 1.8rem
-  border-radius: 50%
-  background: $lineBot
   position: absolute
+  width: 100%
   //background: lighten($lineBot, 20%)
   z-index: 1
   &--shamShuiPo
@@ -180,7 +175,20 @@ body
     top: 58.25%
   &--central
     top: 90%
-
+  
+  &__name
+    margin-top: -1.35338345865rem
+    z-index: 1
+    text-align: right
+  
+  &__btn
+    left: 50%
+    margin-left: -0.9rem
+    width: 1.8rem
+    height: 1.8rem
+    border-radius: 50%
+    background: $lineBot
+    
 //////////////////////////////////////
 /////////////- GALLARY -/////////////
 ////////////////////////////////////
