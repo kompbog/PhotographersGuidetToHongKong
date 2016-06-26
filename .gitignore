@@ -48,3 +48,5 @@ Temporary Items
 *.scssc
 .sass-cache/e92f09586ee29dbcfb0844a5142aa1b1de7584ed/style.sassc
 *.sassc
+*.gitignore
+*.gitattributes
