@@ -101,6 +101,20 @@ body {
   position: fixed;
 }
 
+#radGrad {
+  box-shadow: inset 0 0 10rem 1rem #272727;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
 .scrin {
   width: 100%;
   z-index: 1;
@@ -266,19 +280,25 @@ body {
 }
 
 .gallary {
-  background: #000;
+  box-shadow: 0px 1rem 2rem #000;
+  background: #fff;
   max-height: 80%;
   max-width: 100%;
   z-index: 1;
 }
 .gallary__photo {
   width: 100%;
-  height: auto;
+  margin-bottom: -1.33rem;
+}
+.gallary__name {
+  margin-top: -5px;
+}
+.gallary__description {
+  margin: 1rem;
 }
 .gallary__btn {
   text-align: center;
   width: 100%;
-  margin-top: -5px;
 }
 .gallary__btn > * {
   padding-top: 1em;
@@ -286,7 +306,8 @@ body {
 }
 .gallary__btn_map {
   background: #0178D9;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 .gallary__btn_back {
   background: #212121;
@@ -327,6 +348,17 @@ h2 {
 
 .gallary__btn_back {
   color: #dedede;
+}
+
+.gallary__name {
+  font-family: Open Sans Bold;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.gallary__description {
+  color: #212121;
 }
 
 body {
