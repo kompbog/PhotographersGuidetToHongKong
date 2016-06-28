@@ -119,6 +119,9 @@ body {
   width: 100%;
   z-index: 1;
 }
+.scrin--bg {
+  background: rgba(0, 0, 0, 0.5);
+}
 
 .text {
   text-align: center;
@@ -271,15 +274,43 @@ body {
   text-align: right;
 }
 .station__btn {
+  position: relative;
+  outline: none;
+  border: none;
+  cursor: pointer;
   left: 50%;
-  margin-left: -0.9rem;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: #2196F3;
+  background: #2196f3;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transition: width 250ms ease-in-out 250ms, height 250ms ease-in-out 250ms, background 250ms ease-in-out 250ms, border-radius 250ms ease-in-out 250ms;
+  -o-transition: width 250ms ease-in-out 250ms, height 250ms ease-in-out 250ms, background 250ms ease-in-out 250ms, border-radius 250ms ease-in-out 250ms;
+  -webkit-transition: width 250ms ease-in-out, height 250ms ease-in-out, background 250ms ease-in-out, border-radius 250ms ease-in-out;
+  -webkit-transition-delay: 250ms, 250ms, 250ms, 250ms;
+  transition: width 250ms ease-in-out 250ms, height 250ms ease-in-out 250ms, background 250ms ease-in-out 250ms, border-radius 250ms ease-in-out 250ms;
+}
+.station__btn:active, .station__btn:focus {
+  border-radius: 0%;
+  background: white;
+  z-index: 2;
+  width: 83.3333333333%;
+  left: 50%;
+  height: inherit;
+}
+.station__btn:active .gallary, .station__btn:focus .gallary {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  overflow: hidden;
 }
 
 .gallary {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  overflow: overlay;
   box-shadow: 0px 1rem 2rem #000;
   background: #fff;
   max-height: 80%;
@@ -291,6 +322,7 @@ body {
   margin-bottom: -1.33rem;
 }
 .gallary__name {
+  left: 0;
   margin-top: -5px;
 }
 .gallary__description {
@@ -370,13 +402,6 @@ body:after {
   content: " ";
   display: block;
   clear: both;
-}
-
-.gallary {
-  width: 83.0985915493%;
-  float: left;
-  margin-right: 1.4084507042%;
-  margin-left: 8.4507042254%;
 }
 
 .station__name {
