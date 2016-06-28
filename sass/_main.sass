@@ -47,7 +47,7 @@ body
   position: fixed
   height: 100%
   width: 100%
-  z-index: 3
+  z-index: 1
     
 ///////////////////////////////////
 /////////////- MAIN -/////////////
@@ -56,6 +56,8 @@ body
   width: 100%
   z-index: 1
   &--bg
+    background: rgba(#000, 0)
+    &:target
     background: rgba(#000, .5)
 
 .text
@@ -176,10 +178,10 @@ body
 /////////////- STATION -/////////////
 ////////////////////////////////////
 .station
-  position: absolute
+  position: absolute !important
   width: 100%
   //background: lighten($lineBot, 20%)
-  z-index: 1
+  //z-index: 1
   &--shamShuiPo
     top: 10%
   &--mongKok
@@ -199,37 +201,29 @@ body
     outline: none
     border: none
     cursor: pointer
+    content: ''
+    display: block
     left: 50%
     width: $dotSize
     height: $dotSize
+    margin-left: $dotSizeFix
     border-radius: 50%
     background: rgba($lineBot, 1)
-    +translate(-50%, -50%)
-    +transition(width $transition-time ease-in-out $transition-time, height $transition-time ease-in-out $transition-time, background $transition-time ease-in-out $transition-time, border-radius $transition-time ease-in-out $transition-time)
-    &:active, &:focus
-      border-radius: 0%
-      background: rgba(#fff, 1)
-      z-index: 2
-      width: 83.3333333333%
-      left: 50%
-      height: inherit
 
-      .gallary
-        +opacity(1)
-        overflow: hidden
-      
-    
+.upBtn
+  z-index: 1
+  opacity: 0
+
 //////////////////////////////////////
 /////////////- GALLARY -/////////////
 ////////////////////////////////////
 .gallary
-  +opacity(0)
-  overflow: overlay
+  
+  margin: auto 0
   box-shadow: 0px 1rem 2rem #000
   background: #fff
   max-height: 80%
   max-width: 100%
-  z-index: 1
   &__photo
     width: 100%
     margin-bottom: -1.33rem
@@ -250,4 +244,17 @@ body
       box-shadow: 0px 0.2rem 0.2rem rgba(#000, .5)
       z-index: 2
     &_back
+      text-decoration: none
+      z-index: 2
       background: $bgBtnBack
+  
+#popUpShamShuiPo, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral
+  display: none
+  transition: opacity $transition-time ease-in-out
+  opacity: 0
+  &:target
+    opacity: 1
+    z-index: 4
+    display: block
+    & gallary
+      opacity: 1

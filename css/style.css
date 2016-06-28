@@ -112,7 +112,7 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 3;
+  z-index: 1;
 }
 
 .scrin {
@@ -120,6 +120,7 @@ body {
   z-index: 1;
 }
 .scrin--bg {
+  background: transparent;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -252,9 +253,8 @@ body {
 }
 
 .station {
-  position: absolute;
+  position: absolute !important;
   width: 100%;
-  z-index: 1;
 }
 .station--shamShuiPo {
   top: 10%;
@@ -278,44 +278,27 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+  content: "";
+  display: block;
   left: 50%;
   width: 24px;
   height: 24px;
+  margin-left: -12px;
   border-radius: 50%;
   background: #2196f3;
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -moz-transition: width 250ms ease-in-out 250ms, height 250ms ease-in-out 250ms, background 250ms ease-in-out 250ms, border-radius 250ms ease-in-out 250ms;
-  -o-transition: width 250ms ease-in-out 250ms, height 250ms ease-in-out 250ms, background 250ms ease-in-out 250ms, border-radius 250ms ease-in-out 250ms;
-  -webkit-transition: width 250ms ease-in-out, height 250ms ease-in-out, background 250ms ease-in-out, border-radius 250ms ease-in-out;
-  -webkit-transition-delay: 250ms, 250ms, 250ms, 250ms;
-  transition: width 250ms ease-in-out 250ms, height 250ms ease-in-out 250ms, background 250ms ease-in-out 250ms, border-radius 250ms ease-in-out 250ms;
 }
-.station__btn:active, .station__btn:focus {
-  border-radius: 0%;
-  background: white;
-  z-index: 2;
-  width: 83.3333333333%;
-  left: 50%;
-  height: inherit;
-}
-.station__btn:active .gallary, .station__btn:focus .gallary {
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  overflow: hidden;
+
+.upBtn {
+  z-index: 1;
+  opacity: 0;
 }
 
 .gallary {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  overflow: overlay;
+  margin: auto 0;
   box-shadow: 0px 1rem 2rem #000;
   background: #fff;
   max-height: 80%;
   max-width: 100%;
-  z-index: 1;
 }
 .gallary__photo {
   width: 100%;
@@ -342,7 +325,23 @@ body {
   z-index: 2;
 }
 .gallary__btn_back {
+  text-decoration: none;
+  z-index: 2;
   background: #212121;
+}
+
+#popUpShamShuiPo, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral {
+  display: none;
+  transition: opacity 2500ms ease-in-out;
+  opacity: 0;
+}
+#popUpShamShuiPo:target, #popUpMongKok:target, #popUpTsimShaTsui:target, #popUpCentral:target {
+  opacity: 1;
+  z-index: 4;
+  display: block;
+}
+#popUpShamShuiPo:target gallary, #popUpMongKok:target gallary, #popUpTsimShaTsui:target gallary, #popUpCentral:target gallary {
+  opacity: 1;
 }
 
 body {
@@ -406,6 +405,13 @@ body:after {
 
 .station__name {
   width: 45.0704225352%;
+  float: left;
+  margin-right: 1.4084507042%;
+}
+
+.gallary {
+  margin-left: 8.4507042254%;
+  width: 83.0985915493%;
   float: left;
   margin-right: 1.4084507042%;
 }
