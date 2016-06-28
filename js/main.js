@@ -10,13 +10,14 @@
     $(".scrin--bg").css("top", d +"px") 
   } 
   scrinM(); 
+ 
   $(window).resize(scrinM); 
-  
         function stationM1(){ 
           var a = $('#g1').height();
           var b = $(window).height();
           var c = (b-a)/2
           $("#g1").css("margin-top", c +"px") 
+          $("#g1").css("margin-bottom", c +"px")
         } 
         stationM1(); 
         $(window).resize(stationM1); 
@@ -25,7 +26,8 @@
           var a = $('#g2').height();
           var b = $(window).height();
           var c = (b-a)/2
-          $("#g2").css("margin-top", c +"px") 
+          $("#g2").css("margin-top", c +"px")
+          $("#g2").css("margin-bottom", c +"px")
         } 
         stationM2(); 
         $(window).resize(stationM2);
@@ -34,7 +36,8 @@
           var a = $('#g3').height();
           var b = $(window).height();
           var c = (b-a)/2
-          $("#g3").css("margin-top", c +"px") 
+          $("#g3").css("margin-top", c +"px")
+          $("#g3").css("margin-bottom", c +"px")
         } 
         stationM3(); 
         $(window).resize(stationM4);
@@ -43,7 +46,8 @@
           var a = $('#g4').height();
           var b = $(window).height();
           var c = (b-a)/2
-          $("#g4").css("margin-top", c +"px") 
+          $("#g4").css("margin-top", c +"px")
+          $("#g4").css("margin-bottom", c +"px")
         } 
         stationM4(); 
         $(window).resize(stationM4);

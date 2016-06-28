@@ -6,9 +6,13 @@ $susy: ( columns: 12,gutters: 1/5,container: 100%,math: fluid,output: float,gutt
 // Grid Rules
 body
   +container()
-
+.text__subtitle
+  +push(1)
+  +span(10)
+  
 .station__name
-  +span(5.5)
+  +push(0.5)
+  +span(5)
   
 .gallary
   +push(1)
