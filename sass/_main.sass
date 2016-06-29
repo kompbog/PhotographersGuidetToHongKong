@@ -269,7 +269,7 @@ body
     
   
   
-#popUpShamShuiPo, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral
+#popUpShamShuiPo, #p11, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral
   opacity: 0
   &:target
     opacity: 1
@@ -282,24 +282,11 @@ body
       &>*
         opacity: 1
   
-#p11
-  opacity: 0
-  &:target
-    left: 27%
-    opacity: 1
-    z-index: 4
-    display: block
-    & .gallary
-      left: 0%
-      background: #fff
-      transform: scale(1)
-      border-radius: 0%
-      &>*
-        opacity: 1
-    & .p11
-      left: 27%
-      display: block
-      
+#p11:target
+  left: 27%
+  & .gallary
+    left: 0%
+
 .scrin
   width: 100%
   z-index: 1
