@@ -1,67 +1,79 @@
 (function ($) { 
   
+//ВЫРАВНИВАНИЕ СКРИНА ПОСРЕДИНЕ
   function scrinM(){ 
     var a = $('.station__btn').height();
-    var aa = a/2
+    var aa = a/2;
     var b = $(window).height();
-    var bb = b/2
-    var c = bb+aa
-    var d = c*-1
-    $(".scrin--bg").css("top", d +"px") 
-  } 
+    var bb = b/2;
+    var c = bb+aa;
+    var d = c*-1;
+    $(".scrin--bg").css("top", d) 
+  }
   scrinM(); 
-  $(window).resize(scrinM); 
+    $(window).resize(scrinM);
   
-        function stationM1(){ 
-          var a = $('#g1').height();
-          var b = $(window).height();
-          var c = (b-a)/2
-          $("#g1").css("margin-top", c +"px") 
-          $("#g1").css("margin-bottom", c +"px")
-        } 
-        stationM1(); 
-        $(window).resize(stationM1); 
+// КВАДРАТНЫЕ ОКОН СТАНЦИЙ
+  function gMap(){ 
+    var a = $(window).width();
+    var b = $(window).height();
+    var aa = a * 0.0833333333333;
+    var aaa = a-(aa*2);
+    var bb = b * 0.15;
+    var bbb = b-(bb*2);
+    
+    if(a < b) {
+      $(".map").css("height", aaa +"px")
+      $(".map").css("width", aaa +"px")
+      
+    } else {
+      $(".map").css("width", bbb +"px")
+      $(".map").css("height", bbb +"px") 
+    }
+    
+    
+  } 
+  gMap(); 
+  $(window).resize(gMap);
   
-          function stationM11(){ 
-            var a = $('#g11').height();
-            var b = $(window).height();
-            var c = (b-a)/2
-            $("#g11").css("margin-top", c +"px") 
-            $("#g11").css("margin-bottom", c +"px")
-          } 
-          stationM11(); 
-          $(window).resize(stationM11); 
+//ЦЕНТРИРОВАНИЕ ПО ВЫСОТЕ
+  function gMapH(){ 
+    var aH = $('.gallary').height();
+    var bH = $(window).height();
+    var cH = (bH-aH)/2;
+    $(".gallary").css("top", cH +"px") 
+    $(".gallary").css("bottom", cH +"px")
+  } 
+  gMapH(); 
+  $(window).resize(gMapH);
 
-        function stationM2(){ 
-          var a = $('#g2').height();
-          var b = $(window).height();
-          var c = (b-a)/2
-          $("#g2").css("margin-top", c +"px")
-          $("#g2").css("margin-bottom", c +"px")
-        } 
-        stationM2(); 
-        $(window).resize(stationM2);
-
-        function stationM3(){ 
-          var a = $('#g3').height();
-          var b = $(window).height();
-          var c = (b-a)/2
-          $("#g3").css("margin-top", c +"px")
-          $("#g3").css("margin-bottom", c +"px")
-        } 
-        stationM3(); 
-        $(window).resize(stationM4);
-
-        function stationM4(){ 
-          var a = $('#g4').height();
-          var b = $(window).height();
-          var c = (b-a)/2
-          $("#g4").css("margin-top", c +"px")
-          $("#g4").css("margin-bottom", c +"px")
-        } 
-        stationM4(); 
-        $(window).resize(stationM4);
+//ЦЕНТРИРОВАНИЕ ПО ШИРИНЕ  
+    function gMapW(){ 
+    var aW = $('.gallary').width();
+    var bW = $(window).width();
+    var cW = (bW-aW)/2;
+    $(".gallary").css("left", cW +"px") 
+    $(".gallary").css("right", cW +"px")
+  } 
+  gMapW(); 
+  $(window).resize(gMapW);
   
+  stationM11(); 
+  $(window).resize(stationM11); 
+    function stationM11(){ 
+      var a = $('#g11').height();
+      var b = $(window).height();
+      var c = (b-a)/2
+      $("#g11").css("margin-top", c +"px") 
+      $("#g11").css("margin-bottom", c +"px")
+    } 
+  stationM11(); 
+  $(window).resize(stationM11); 
+  
+  
+  
+
+//ВЫСОТА ДЛЯ СКРИНА  
   function scrinH(){
     var windowH = $(window).height(); 
     $(".scrin, #line").css("height", windowH +"px") 
@@ -69,6 +81,7 @@
   scrinH(); 
   $(window).resize(scrinH); 
   
+//ВЫСОТА ДЛЯ КАРТЫ СВГ  
   function conentH(){ 
     var multiplier;
     if($(window).width() < 384) {

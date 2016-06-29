@@ -69,7 +69,7 @@ body
   &--subtitle
     width: 100%
     position: absolute
-    bottom: 10%
+    bottom: 0%
     text-align: center
     height: 16.66em
   &__subtitle
@@ -99,9 +99,9 @@ body
 .shadow
   background-image: -svg(linear-gradient(to bottom, rgba($bgColor, 0), rgba(#1E1F1E, 1), rgba(#1E1F1E, 1), rgba($bgColor, 0)))
   
-///////////////////////////////////
-/////////////- MENU -/////////////
-/////////////////////////////////
+//////////////////////////////////
+/////////////- NAV -/////////////
+////////////////////////////////
 #menuBtn 
   top: .5em
   left: .5em
@@ -209,12 +209,12 @@ body
     border-radius: 50%
     background: rgba($lineBot, 1)
     &--photo
-      background: lighten(rgba($lineBot, 1), 20%)
+      background: rgba($lineBot, .25)
       transform: scale(0.8)
       
 
 .upBtn
-  background: #f00
+  //background: #f00
   z-index: 1
   opacity: 1
 
@@ -222,13 +222,12 @@ body
 /////////////- GALLARY -/////////////
 ////////////////////////////////////
 .gallary
+  position: absolute
   left: 0%
   border-radius: 50%
   overflow: hidden
   box-shadow: 0px 1rem 2rem #000
   background: $lineBot
-  max-height: 80%
-  max-width: 100%
   transform: scale(0)
   transition: all 300ms ease-in-out
   & > *
@@ -237,6 +236,10 @@ body
   &__photo
     width: 100%
     margin-bottom: -1.33rem
+    &--photo
+      box-shadow: 0px 0.2rem 0.2rem rgba(#000, .5)
+      z-index: 2
+      margin-bottom: 0
   &__name
     left: 0
     margin-top: -5px
@@ -251,6 +254,10 @@ body
       padding-top: 1.33rem
       padding-bottom: 1rem
     &_map
+      left: 0
+      right: 0
+      top: 0rem
+      position: absolute
       background: $bgBtnMap
       box-shadow: 0px 0.2rem 0.2rem rgba(#000, .5)
       z-index: 2
@@ -265,9 +272,11 @@ body
       &--photo
         top: 0
     &--photo
-      height: 3.62rem
+      margin-top: -5px
+      height: 3.65rem
     
-  
+  .map
+    
   
 #popUpShamShuiPo, #p11, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral
   opacity: 0

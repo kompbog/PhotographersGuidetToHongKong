@@ -9,15 +9,16 @@
 <body>
 <input type="checkbox" id="sideBarMenu">
 <div id="site">
+
 <!-- NAV -->
   <label id="menuBtn" for="sideBarMenu"></label>
   <nav id="navigation">
     <ul>
-      <li>Главная</li>
-      <li>Sham Shui Po</li>
-      <li>Mong Kok</li>
-      <li>Tsim Sha Tsui</li>
-      <li>Central</li>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#popUpShamShuiPo" for="sideBarMenu">Sham Shui Po</a></li>
+      <li><a href="#popUpMongKok" for="sideBarMenu">Mong Kok</a></li>
+      <li><a href="#popUpTsimShaTsui" for="sideBarMenu">Tsim Sha Tsui</a></li>
+      <li><a href="#popUpCentral" for="sideBarMenu">Central</a></li>
     </ul>
   </nav>
   
@@ -37,7 +38,8 @@
       <p class="text__info">Для удобства<br>мы разместили путь<br>по Гонконгскому метр</p>
     </div>
   </div>
-
+  
+<!-- STATION -->
   <div class="main">
     <div class="shadowMap"></div>
     <div id="line">
@@ -49,15 +51,17 @@
       <div class="station__btn"> </div>
         <div class="scrin scrin--bg" id="popUpShamShuiPo">
           <div class="gallary"  id="g1">
-            <img class="gallary__photo" src="./img/1ShamShuiPo/main.jpg" alt="Photo">
-            <p class="gallary__name">Sham Shui Po</p>
-            <p class="gallary__description">
-              Самый странный и крутой Гонконг.
-                Если вы приехали только за стрит фото, то это первое место, в котором вы должны побывать 
-                Отличный фон из рыночной суеты и происшествия на обочине, которые разыгрываются для вас
-            </p>
+            <div class="map">
+              <img class="gallary__photo" src="./img/1ShamShuiPo/main.jpg" alt="Photo">
+              <p class="gallary__name">Sham Shui Po</p>
+              <p class="gallary__description">
+                Самый странный и крутой Гонконг.
+                  Если вы приехали только за стрит фото, то это первое место, в котором вы должны побывать 
+                  Отличный фон из рыночной суеты и происшествия на обочине, которые разыгрываются для вас
+              </p>
+            </div>
             <div class="gallary__btn">
-              <div class="gallary__btn_map">НА КАРТУ</div>
+              <a class="gallary__btn_map">НА КАРТУ</a>
               <a class="gallary__btn_back" href="#radGrad">НАЗАД</a>
             </div>
           </div>
@@ -68,7 +72,7 @@
       <div class="station__btn station__btn--photo"> </div>
         <div class="scrin scrin--bg" id="p11">
           <div class="gallary"  id="g11">
-            <img class="gallary__photo" src="./img/1ShamShuiPo/1.jpg" alt="Photo">
+            <img class="gallary__photo gallary__photo--photo" src="./img/1ShamShuiPo/1.jpg" alt="Photo">
             <div class="gallary__btn gallary__btn--photo">
               <a class="gallary__btn_back gallary__btn_back--photo" href="#radGrad">НАЗАД</a>
             </div>
@@ -76,68 +80,10 @@
         </div>
       </div>
     
-    <div class="station station--mongKok">
-      <p class="station__name">Mong Kok</p>
-      <div class="station__btn"> </div>
-        <div class="scrin scrin--bg" id="popUpMongKok">
-          <div class="gallary" id="g2">
-            <img class="gallary__photo" src="./img/2MongKok/main.jpg" alt="Photo">
-            <p class="gallary__name">Mong Kok</p>
-            <p class="gallary__description">
-              Самое густонаселённое место в мире.<br>
-  Стоит пройти за торговый центр и вы увидите несколько отличных улиц для Стрита
-  Улицы заполнены рыночными лотками и множество других эпизодов из жизни/
-            </p>
-            <div class="gallary__btn">
-              <div class="gallary__btn_map">НА КАРТУ</div>
-              <a class="gallary__btn_back" href="#radGrad">НАЗАД</a>
-            </div>
-          </div>
-        </div>
-    </div>
     
-    <div class="station station--tsimShaTsui">
-      <p class="station__name">Tsim Sha Tsui</p>
-      <div class="station__btn"> </div>
-        <div class="scrin scrin--bg" id="popUpTsimShaTsui">
-          <div class="gallary" id="g3">
-            <img class="gallary__photo" src="./img/3TsimShaTsui/main.jpg" alt="Photo">
-            <p class="gallary__name">Mong Kok</p>
-            <p class="gallary__description">
-              Самое густонаселённое место в мире.<br>
-  Стоит пройти за торговый центр и вы увидите несколько отличных улиц для Стрита
-  Улицы заполнены рыночными лотками и множество других эпизодов из жизни/
-            </p>
-            <div class="gallary__btn">
-              <div class="gallary__btn_map">НА КАРТУ</div>
-              <a class="gallary__btn_back" href="#radGrad">НАЗАД</a>
-            </div>
-          </div>
-        </div>
-    </div>
+<!--    <div id="radGrad"></div>-->
     
-    <div class="station station--central">
-      <p class="station__name">Central</p>
-      <div class="station__btn"> </div>
-        <div class="scrin scrin--bg" id="popUpCentral">
-          <div class="gallary" id="g4">
-            <img class="gallary__photo" src="./img/4Central/main.jpg" alt="Photo">
-            <p class="gallary__name">Mong Kok</p>
-            <p class="gallary__description">
-              Самое густонаселённое место в мире.<br>
-  Стоит пройти за торговый центр и вы увидите несколько отличных улиц для Стрита
-  Улицы заполнены рыночными лотками и множество других эпизодов из жизни/
-            </p>
-            <div class="gallary__btn">
-              <div class="gallary__btn_map">НА КАРТУ</div>
-              <a class="gallary__btn_back" href="#radGrad">НАЗАД</a>
-            </div>
-          </div>
-        </div>
-    </div>
-    
-    <div id="radGrad"></div>
-    
+<!-- STATION BTN -->
     <a class="station__btn station station--shamShuiPo upBtn" href="#popUpShamShuiPo"> </a>
     
       <a class="station__btn station__btn--photo station station--p11 station--p11--fix upBtn" href="#p11"> </a>

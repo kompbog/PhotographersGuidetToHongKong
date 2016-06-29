@@ -131,7 +131,7 @@ body {
 .text--subtitle {
   width: 100%;
   position: absolute;
-  bottom: 10%;
+  bottom: 0%;
   text-align: center;
   height: 16.66em;
 }
@@ -287,24 +287,22 @@ body {
   background: #2196f3;
 }
 .station__btn--photo {
-  background: #82c4f8;
+  background: rgba(33, 150, 243, 0.25);
   transform: scale(0.8);
 }
 
 .upBtn {
-  background: #f00;
   z-index: 1;
   opacity: 1;
 }
 
 .gallary {
+  position: absolute;
   left: 0%;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0px 1rem 2rem #000;
   background: #2196F3;
-  max-height: 80%;
-  max-width: 100%;
   transform: scale(0);
   transition: all 300ms ease-in-out;
 }
@@ -315,6 +313,11 @@ body {
 .gallary__photo {
   width: 100%;
   margin-bottom: -1.33rem;
+}
+.gallary__photo--photo {
+  box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  margin-bottom: 0;
 }
 .gallary__name {
   left: 0;
@@ -333,6 +336,10 @@ body {
   padding-bottom: 1rem;
 }
 .gallary__btn_map {
+  left: 0;
+  right: 0;
+  top: 0rem;
+  position: absolute;
   background: #2196f3;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
   z-index: 2;
@@ -350,7 +357,8 @@ body {
   top: 0;
 }
 .gallary__btn--photo {
-  height: 3.62rem;
+  margin-top: -5px;
+  height: 3.65rem;
 }
 
 #popUpShamShuiPo, #p11, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral {
@@ -452,13 +460,6 @@ body:after {
 .station__name {
   margin-left: 4.2253521127%;
   width: 40.8450704225%;
-  float: left;
-  margin-right: 1.4084507042%;
-}
-
-.gallary {
-  margin-left: 8.4507042254%;
-  width: 83.0985915493%;
   float: left;
   margin-right: 1.4084507042%;
 }
