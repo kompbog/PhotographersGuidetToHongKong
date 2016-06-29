@@ -133,10 +133,10 @@ body {
   position: absolute;
   bottom: 10%;
   text-align: center;
-  height: 7.66em;
+  height: 16.66em;
 }
 .text__subtitle {
-  padding-top: 1.915em;
+  padding-top: 4.915em;
 }
 .text--info {
   width: 100%;
@@ -258,6 +258,7 @@ body {
 }
 .station--central {
   top: 90%;
+  height: 0;
 }
 .station__name {
   margin-top: -1.3533834587rem;
