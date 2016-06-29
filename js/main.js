@@ -22,15 +22,15 @@
         stationM1(); 
         $(window).resize(stationM1); 
   
-          function stationM1(){ 
+          function stationM11(){ 
             var a = $('#g11').height();
             var b = $(window).height();
             var c = (b-a)/2
             $("#g11").css("margin-top", c +"px") 
             $("#g11").css("margin-bottom", c +"px")
           } 
-          stationM1(); 
-          $(window).resize(stationM1); 
+          stationM11(); 
+          $(window).resize(stationM11); 
 
         function stationM2(){ 
           var a = $('#g2').height();
