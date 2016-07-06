@@ -1,0 +1,72 @@
+//  Gallary
+.gallary
+  position: absolute
+  left: 0%
+  border-radius: 50%
+  overflow: hidden
+  box-shadow: 0px 1rem 2rem #000
+  background: $lineBot
+  transform: scale(0)
+  transition: all 300ms ease-in-out
+  & > *
+    transition: opacity 300ms ease-in-out 100ms
+    opacity: 0
+  &__photo
+    width: 100%
+    margin-bottom: -1.33rem
+    &--photo
+      box-shadow: 0px 0.2rem 0.2rem rgba(#000, .5)
+      z-index: 2
+      margin-bottom: 0
+  &__name
+    left: 0
+    margin-top: -5px
+  &__description
+    top: 1rem
+    
+  &__btn
+    height: 7.29rem
+    text-align: center
+    width: 100%
+    &>*
+      padding-top: 1.33rem
+      padding-bottom: 1rem
+    &_map
+      left: 0
+      right: 0
+      top: 0
+      position: absolute
+      background: $bgBtnMap
+      box-shadow: 0px 0.2rem 0.2rem rgba(#000, .5)
+      z-index: 2
+      margin-bottom: 3.66rem
+    &_back
+      left: 0
+      right: 0
+      top: 3.67rem
+      position: absolute
+      text-decoration: none
+      background: $bgBtnBack
+      &--photo
+        top: 0
+    &--photo
+      margin-top: -5px
+      height: 3.65rem
+
+#popUpShamShuiPo, #p11, #popUpMongKok, #popUpTsimShaTsui, #popUpCentral
+  opacity: 0
+  &:target
+    opacity: 1
+    z-index: 4
+    display: block
+    & .gallary
+      background: #fff
+      transform: scale(1)
+      border-radius: 0%
+      &>*
+        opacity: 1
+  
+#p11:target
+  left: 27%
+  & .gallary
+    left: 0%

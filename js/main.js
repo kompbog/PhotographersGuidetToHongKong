@@ -15,23 +15,18 @@
   
 // КВАДРАТНЫЕ ОКОН СТАНЦИЙ
   function gMap(){ 
-    var a = $(window).width();
+    var a = $('.map').width();
     var b = $(window).height();
-    var aa = a * 0.0833333333333;
-    var aaa = a-(aa*2);
-    var bb = b * 0.15;
-    var bbb = b-(bb*2);
-    
+    var c = $(window).width();
+    var d = $('.gallary__photo').height()*1.38805970149
     if(a < b) {
-      $(".map").css("height", aaa +"px")
-      $(".map").css("width", aaa +"px")
-      
+      $(".map").css("height", a +"px")
+      $(".gallary__description").css("height", d +"px")
+      $(".map").css("width", 100 +"%")
     } else {
-      $(".map").css("width", bbb +"px")
-      $(".map").css("height", bbb +"px") 
-    }
-    
-    
+      $(".map").css("width", b +"px")
+      $(".map").css("height", 100 +"%")
+    }  
   } 
   gMap(); 
   $(window).resize(gMap);
@@ -48,15 +43,16 @@
   $(window).resize(gMapH);
 
 //ЦЕНТРИРОВАНИЕ ПО ШИРИНЕ  
-    function gMapW(){ 
-    var aW = $('.gallary').width();
-    var bW = $(window).width();
-    var cW = (bW-aW)/2;
-    $(".gallary").css("left", cW +"px") 
-    $(".gallary").css("right", cW +"px")
-  } 
-  gMapW(); 
-  $(window).resize(gMapW);
+//  function gMapW(){ 
+//    var aW = $('.gallary').width();
+//    var bW = $(window).width();
+//    var cW = (bW-aW)/2;
+//    $(".gallary").css("left", cW +"px") 
+//    $(".gallary").css("right", cW +"px")
+//  } 
+//  gMapW(); 
+//  $(window).resize(gMapW);
+  
   
   stationM11(); 
   $(window).resize(stationM11); 
@@ -76,7 +72,7 @@
 //ВЫСОТА ДЛЯ СКРИНА  
   function scrinH(){
     var windowH = $(window).height(); 
-    $(".scrin, #line").css("height", windowH +"px") 
+    $(".scrin, #line").css("height", windowH) 
   } 
   scrinH(); 
   $(window).resize(scrinH); 
