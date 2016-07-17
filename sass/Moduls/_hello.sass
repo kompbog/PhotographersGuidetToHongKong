@@ -1,40 +1,27 @@
 //  1st page
 /////////////////////////
-.text
-  text-align: center
-  height: 2*16.43em
-  position: absolute
-  top: 0
-  width: 100%
-  &__title
-    margin: 0 auto
-    padding-top: 1em
-    font-size: 3.286em
-    margin-top: 8rem
+.title
+  @extend %shadow
+  top: 1em
   
-  //  Bottom 1st page
-  /////////////////////////
-  &--subtitle
-    width: 100%
-    position: absolute
-    bottom: 0%
-    text-align: center
-    height: 16.66em
-  &__subtitle
-    padding-top: 4.915em
-    
-  //  2nd page
-  /////////////////////////
-  &--info
-    width: 100%
-    position: absolute
-    bottom: 50%
-    text-align: center
-    height: 2*6.56462em
-    margin-bottom: -2.85*1.641155em
-  &__info
-    margin-top: 2.85*1.641155em
+  &__text
+    padding: 1em 0
+    font-size: 3.286em
 
-//  .shadow BG блоков text и text--subtitle    
-.shadow
-  background-image: -svg(linear-gradient(to bottom, rgba($bgColor, 0), rgba(#1E1F1E, 1), rgba(#1E1F1E, 1), rgba($bgColor, 0)))
+//  Bottom
+/////////////////////////
+.subtitle
+  @extend %shadow
+  bottom: 0em
+
+  &__text
+    padding: 2.5rem 0
+
+//  2nd page
+/////////////////////////
+.information
+  @extend %shadow
+  bottom: 50%
+
+  &__text
+    padding: 2.5rem 0

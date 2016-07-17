@@ -1,38 +1,54 @@
 //  Map
 /////////////////////////
 .shadowMap
-  +background-image (linear-gradient($bgColor ,rgba($bgColor, 0)))
+  position: absolute
+  +background-image (linear-gradient($bgBlack ,rgba($bgBlack, 0)))
   width: 100%
   z-index: 0
-  
+
 //  Station
 /////////////////////////
-.station
+
+//  Btn under fixed blocks _fixed.sass
+//.upBtn
+  background: #f00
+  z-index: 1
+  opacity: 1
+
+.dot
+  //display: none
   position: absolute //!important
   width: 100%
+
   &--shamShuiPo
     top: 10%
+
   &--p11
     top: 8%
     left: -27%
     &--fix
       left: 23% //!important
+
   &--mongKok
     top: 32.25%
+
   &--tsimShaTsui
     top: 58.25%
+
   &--central
     top: 90%
-    
+
     //Фиксит баг с большим отступом в футере
     height: 0
-  
+
   &__name
     margin-top: -1.35338345865rem
     z-index: 1
     text-align: right
+
   &__btn
-    //position: relative
+    z-index: 1
+    position: relative
     outline: none
     border: none
     cursor: pointer
@@ -43,13 +59,8 @@
     height: $dotSize
     margin-left: $dotSizeFix
     border-radius: 50%
-    background: rgba($lineBot, 1)
+    background: rgba($blue, 1)
+
     &--photo
-      background: rgba($lineBot, .25)
+      background: rgba($blue, .25)
       transform: scale(0.8)
-      
-//  Btn under fixed blocks _fixed.sass   
-.upBtn
-  //background: #f00
-  z-index: 1
-  opacity: 1

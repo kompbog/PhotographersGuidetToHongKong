@@ -1,20 +1,27 @@
 //  Fixed Block
 /////////////////////////
-#line 
-  background: $bgLine
+.line
+  width: 100%
+  z-index: 1
+  background: $darkBlue
   width: $lineWidth
   left: 50%
   top: 0
   margin-left: $lineWidthFix
   position: fixed
+
   &__inert
-    +background-image (linear-gradient($lineTop ,$lineBot))
+    +background-image (linear-gradient($satBlue ,$blue))
     height: 50%
     width: $lineWidth
-    box-shadow: 0 0 10px $lineBot
+    box-shadow: 0 0 10px $blue
     position: fixed
-    
-#radGrad
+
+.radGrad
+  pointer-events: none
+  width: 100%
+  z-index: 1
+
   box-shadow: inset 0 0 10rem 1rem rgba(#272727, 1)
   top: 0
   left: 0

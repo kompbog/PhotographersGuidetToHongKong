@@ -1,0 +1,127 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Test
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", href="css/style.css")
+    
+  body
+    
+    //---------------------//
+    //--NAVIGATION         //
+    //---------------------//
+    header
+      .menuBtn 
+      nav.navigation
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Sham Shui Po
+          li: a(href="#") Mong Kok
+          li: a(href="#") Tsim Sha Tsui
+          li: a(href="#") Central
+      
+    
+    
+    //---------------------//
+    //--1ST PAGE           //
+    //---------------------//
+          
+    section.hello
+      .title
+        h1.title__text Гонконг<br>для<br>фотографов
+      .subtitle
+        h2.subtitle__text Это путеводитель по стрит-фотографиям Мы покажем места которые стоит посетить
+    
+    
+    
+    //---------------------//
+    //--2ND PAGE           //
+    //---------------------//
+    
+    section.info
+      .information
+        p.information__text Для удобства мы разместили<br>путь по Гоконгской ветке метро
+    
+    
+    
+    //---------------------//
+    //--CONTENT/MAP        //  
+    //---------------------//
+    
+    section.main
+    
+      .shadowMap
+      .line
+        .line__inert
+      
+      
+      
+      //---------------------//
+      //--STATION            //
+      //---------------------//
+      
+      section.dot.dot--shamShuiPo
+        h2.dot__name Sham Shui Po
+        .dot__btn.dot__btn--shamShuiPo
+          
+        
+      
+      
+      //---------------------//
+      //--PHOTO              //
+      //---------------------//
+              
+      section.dot.dot--p11
+        .dot__btn.dot__btn--photo
+          
+      
+      .radGrad
+      
+      //---------------------//
+      //--BTN                //
+      //---------------------//
+      
+      //-.upBtn.dot.dot__btn.dot--shamShuiPo
+      //-a.upBtn.dot.dot__btn.dot__btn--photo.dot--p11.dot--p11--fix(href="#p11") 
+
+      //-.upBtn.dot.dot__btn.dot--mongKok 
+      
+      //-.upBtn.dot.dot__btn.dot--tsimShaTsui
+      
+      //-.upBtn.dot.dot__btn.dot--central 
+    
+    
+      .popUp#popUpMongKok
+          .gallery
+            .gallery__content
+              <iframe class="gallery__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7381.212577074294!2d114.16203600000001!3d22.330725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x754236ed67265786!2sSham+Shui+Po+Station!5e0!3m2!1sru!2sus!4v1468716809754" frameborder="0" allowfullscreen></iframe>
+              .gallery__image
+                img.gallery__image_photo(src="./img/1ShamShuiPo/main.jpg", alt="photo")
+                h3.gallery__image_name Sham Shui Po
+                
+              p.gallery__description
+                |Если вы приехали только за стрит-фото,
+                |то это первое место, в котором вы должны побывать Отличный
+                |фон из рыночной суеты и происшествия на обочине, которые
+                |разыгрываются для вас
+                
+              .gallery__btn.gallery__btn--map НА КАРТУ
+            .gallery__btn.gallery__btn--back НАЗАД
+    
+      //-.popUp#p11
+          .gallery
+            .gallery__content
+              .gallery__image
+                img.gallery__image_photo.gallery__image_photo--photo(src="./img/1ShamShuiPo/1.jpg", alt="photo")
+              
+            a.gallery__btn.gallery__btn--back(href="#") НАЗАД
+          
+    
+    //---------------------//
+    //--SCRIPT             //
+    //---------------------//
+    
+    script(type="text/javascript", src="js/jquery-3.0.0.min.js")
+    script(type="text/javascript", src="js/main.js")
