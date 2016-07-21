@@ -1,6 +1,15 @@
 // Responsive
 /////////////////////////
-  
-@media (min-width: 401px)
+
+@media (min-width: 25.063em)
   .main
     background-size: 100%
+
+.gallery, .photo
+  @media #{$mq-small}
+    // +push(2)
+    // +span(8)
+    margin-left: 16.9014084507%
+    width: 66.1971830986%
+    float: left
+    margin-right: 1.4084507042%

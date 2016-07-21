@@ -32,7 +32,7 @@ html
       .title
         h1.title__text Гонконг<br>для<br>фотографов
       .subtitle
-        h2.subtitle__text Это путеводитель по стрит-фотографиям Мы покажем места которые стоит посетить
+        h2.subtitle__text <span>Это путеводитель по стрит-фотографиям.</span> <span>Мы покажем места которые стоит посетить</span>
     
     
     
@@ -89,8 +89,17 @@ html
       //---------------------//
               
       .dot.dot--p11
-        a.dot__btn.dot__btn--photo.dot__btn--p11.SOOOOQA(href="#p11")
+        a.dot__btn.dot__btn--photo.dot__btn--p11(href="#p11")
         .dot__btn_target#p11(name="p11")  
+        
+      .dot.dot--p12
+        a.dot__btn.dot__btn--photo.dot__btn--p12(href="#p12")
+        .dot__btn_target#p12(name="p12")  
+
+      
+      
+      
+      
       
       .radGrad
       
@@ -114,13 +123,12 @@ html
           .btn.btn--back НАЗАД
     
       
-        .photo.dot--p11
+        .photo
           .photo__content
             img.photo__image_photo(src="./img/1ShamShuiPo/1.jpg", alt="photo")
-            
             .btn.btn--back НАЗАД
-          
-    
+
+
     //---------------------//
     //--SCRIPT             //
     //---------------------//

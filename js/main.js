@@ -8,18 +8,26 @@ $('.nav__link').on('click', function(){
 });
 
 //BTN PHOTO
-$('.dot__btn--p11').on('click', function(){
 
+$('.dot__btn--p11, .dot__btn--p12 .dot__btn--p13,  .dot__btn--p14').on('click', function(){
   $('html').toggleClass('js-click-dot__btn--photo');
-
-  $(".photo__image_photo").attr("src", "./img/1ShamShuiPo/1.jpg");
-
-  // $('.photo').toggleClass('js-btnFix2');
-  //   $(".js-btnFix2").css("left", "0%");
-
 });
-// $('.photo').toggleClass('js-btnFix1');
-// $(".js-btnFix1").css("left", "-27%");
+
+$('.dot__btn--p11').on('click', function(){
+  $(".photo__image_photo").attr("src", "./img/1ShamShuiPo/1.jpg");
+  $('.photo').css('left', '-27%');
+});
+
+$('.dot__btn--p12').on('click', function(){
+  $(".photo__image_photo").attr("src", "./img/1ShamShuiPo/2.jpg");
+});
+
+
+
+
+
+
+
 
 //BTN STATION
   $('.dot__btn--shamShuiPo, .dot__btn--mongKok, .dot__btn--tsimShaTsui, .dot__btn--central').on('click', function(){
@@ -42,6 +50,7 @@ $('.btn--back').on('click', function(){
   } else {
     $('html').removeClass('js-click-dot__btn--station');
     $('html').removeClass('js-click-dot__btn--photo');
+
   }
 });
 
@@ -87,7 +96,7 @@ $('.dot__btn--shamShuiPo, .dot__btn--mongKok, .dot__btn--tsimShaTsui, .dot__btn-
   $(window).resize(gMapH);
 });
 
-$('.dot__btn--p11').on('click', function(){
+$('.dot__btn--p11, .dot__btn--p12 .dot__btn--p13,  .dot__btn--p14').on('click', function(){
   function pMapH(){
     var aH = $('.photo').height();
     var bH = $(window).height();
