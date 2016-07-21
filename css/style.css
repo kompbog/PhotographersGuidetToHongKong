@@ -198,6 +198,9 @@ body:after {
   border-radius: 50%;
   background: #2196f3;
 }
+.dot__btn_target {
+  position: relative;
+}
 .dot__btn--photo {
   background: rgba(33, 150, 243, 0.25);
   transform: scale(0.8);
@@ -317,7 +320,7 @@ body:after {
   bottom: 0;
   left: 0;
   background: transparent;
-  transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out 100ms;
 }
 
 .gallery {
@@ -328,7 +331,7 @@ body:after {
   background: #2196F3;
   border-radius: 50%;
   transform: scale(0);
-  transition: all 300ms ease-in-out;
+  transition: all 350ms ease-in-out 100ms;
 }
 .gallery > * {
   opacity: 0;

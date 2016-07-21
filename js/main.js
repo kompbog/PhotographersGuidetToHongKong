@@ -71,33 +71,10 @@ $('.gallery__btn--back').on('click', function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//ЦЕНТРИРОВАНИЕ ПО ШИРИНЕ
-//  function gMapW(){
-//    var aW = $('.gallery').width();
-//    var bW = $(window).width();
-//    var cW = (bW-aW)/2;
-//    $(".gallery").css("left", cW +"px");
-//    $(".gallery").css("right", cW +"px");
-//  }
-//  gMapW();
-//  $(window).resize(gMapW);
-
-
 //ВЫСОТА ДЛЯ СКРИНА
   function scrinH(){
     var windowH = $(window).height();
-    $(".hello, .info, .line, .radGrad").css("height", windowH);
+    $(".hello, .info, .line, .radGrad, .dot__btn_target").css("height", windowH);
   }
   scrinH();
   $(window).resize(scrinH);
@@ -130,5 +107,27 @@ $('.gallery__btn--back').on('click', function(){
   }
   shadowH();
   $(window).resize(shadowH);
+
+
+function stationTarget(){
+  var a = $(window).height();
+  var b = a/2;
+  var c = $(".dot__btn").height()/2;
+  var d = (b+c)*-1;
+  $(".dot__btn_target").css("top", d +"px");
+}
+stationTarget();
+$(window).resize(stationTarget);
+
+
+
+
+
+$('a[href^="#"]').click(function () {
+    a = $(this).attr("href");
+    b = $(a).offset().top;
+
+    $('html').animate( { scrollTop: b }, 100 );
+});
 
 })(jQuery);
