@@ -13,7 +13,7 @@
   transition: background 300ms ease-in-out 100ms
   //background: rgba(#000, .5)
 
-.gallery
+.gallery, .photo
   position: relative
   overflow: hidden
   box-shadow: 0px 1rem 2rem #000
@@ -62,22 +62,29 @@
     display: block
     margin: .5em 1em 1em 1em
 
-  &__btn
-    text-align: center
-    padding: 1em 0 1em 0
-    display: block
-    width: 100%
-    text-decoration: none
-    cursor: pointer
 
-    &--map
-      box-shadow: 0px -0.1em 0.2em 0em rgba(#000, .5)
-      //box-shadow: inset 0px -0.1em 0.2em rgba(#000, .5)
-      background: $btnMap
-      //z-index: 2
-      position: relative
-      transition: all 150ms ease-in-out
+.btn
+  text-align: center
+  padding: 1em 0 1em 0
+  display: block
+  width: 100%
+  text-decoration: none
+  cursor: pointer
 
-    &--back
-      background: $btnBack
-      box-shadow: 0px -0.1em 0.2em rgba(#000, .5)
+  &--map
+    box-shadow: 0px -0.1em 0.2em 0em rgba(#000, .5)
+    //box-shadow: inset 0px -0.1em 0.2em rgba(#000, .5)
+    background: $btnMap
+    //z-index: 2
+    position: relative
+    transition: all 150ms ease-in-out
+
+  &--back
+    background: $btnBack
+    box-shadow: 0px -0.1em 0.2em rgba(#000, .5)
+
+
+.photo.dot--p11
+  top: auto
+  transition: all 350ms ease-in-out 100ms
+  position: absolute

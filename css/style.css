@@ -54,11 +54,11 @@ body {
   text-shadow: 0 0.143em 0.286em #000;
 }
 
-.gallery__btn--map {
+.btn--map {
   color: #212121;
 }
 
-.gallery__btn--back {
+.btn--back {
   color: #dedede;
 }
 
@@ -92,6 +92,13 @@ body:after {
 }
 
 .gallery {
+  margin-left: 8.4507042254%;
+  width: 83.0985915493%;
+  float: left;
+  margin-right: 1.4084507042%;
+}
+
+.photo {
   margin-left: 8.4507042254%;
   width: 83.0985915493%;
   float: left;
@@ -165,9 +172,6 @@ body:after {
   top: 8%;
   left: -27%;
 }
-.dot--p11--fix {
-  left: 23%;
-}
 .dot--mongKok {
   top: 32.25%;
 }
@@ -200,6 +204,7 @@ body:after {
 }
 .dot__btn_target {
   position: relative;
+  pointer-events: none;
 }
 .dot__btn--photo {
   background: rgba(33, 150, 243, 0.25);
@@ -338,7 +343,7 @@ body:after {
   transition: background 300ms ease-in-out 100ms;
 }
 
-.gallery {
+.gallery, .photo {
   position: relative;
   overflow: hidden;
   box-shadow: 0px 1rem 2rem #000;
@@ -348,16 +353,16 @@ body:after {
   transform: scale(0);
   transition: all 350ms ease-in-out 100ms;
 }
-.gallery > * {
+.gallery > *, .photo > * {
   opacity: 0;
   transition: opacity 300ms ease-in-out 100ms;
 }
-.gallery__content {
+.gallery__content, .photo__content {
   position: relative;
   box-shadow: 0px 0em 0em rgba(0, 0, 0, 0.5);
   transition: all 550ms ease-in-out;
 }
-.gallery__map {
+.gallery__map, .photo__map {
   position: absolute;
   border: 0;
   width: 100%;
@@ -367,28 +372,29 @@ body:after {
   pointer-events: none;
   transition: opacity 300ms ease-in-out 200ms;
 }
-.gallery__image {
+.gallery__image, .photo__image {
   position: relative;
 }
-.gallery__image_photo {
+.gallery__image_photo, .photo__image_photo {
   width: 100%;
   display: block;
 }
-.gallery__image_photo--photo {
+.gallery__image_photo--photo, .photo__image_photo--photo {
   box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.5);
 }
-.gallery__image_name {
+.gallery__image_name, .photo__image_name {
   line-height: 1;
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 0 0 -0.11em -0.09em;
 }
-.gallery__description {
+.gallery__description, .photo__description {
   display: block;
   margin: 0.5em 1em 1em 1em;
 }
-.gallery__btn {
+
+.btn {
   text-align: center;
   padding: 1em 0 1em 0;
   display: block;
@@ -396,40 +402,63 @@ body:after {
   text-decoration: none;
   cursor: pointer;
 }
-.gallery__btn--map {
+.btn--map {
   box-shadow: 0px -0.1em 0.2em 0em rgba(0, 0, 0, 0.5);
   background: #2196f3;
   position: relative;
   transition: all 150ms ease-in-out;
 }
-.gallery__btn--back {
+.btn--back {
   background: #212121;
   box-shadow: 0px -0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
 
-.js-click-dot__btn .popUp {
+.photo.dot--p11 {
+  top: auto;
+  transition: all 350ms ease-in-out 100ms;
+  position: absolute;
+}
+
+.js-click-dot__btn--station .popUp {
   pointer-events: all;
   opacity: 1;
   background: rgba(0, 0, 0, 0.5);
 }
-.js-click-dot__btn .popUp .gallery {
+.js-click-dot__btn--station .popUp .gallery {
   background: #fff;
   border-radius: 0%;
   transform: scale(1);
 }
-.js-click-dot__btn .popUp .gallery > * {
+.js-click-dot__btn--station .popUp .gallery > * {
   opacity: 1;
 }
 
-.js-click-gallery__btn--map {
+.js-click-btn--map .gallery__content {
   box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.5) !important;
 }
-.js-click-gallery__btn--map .gallery__btn--map {
+.js-click-btn--map .gallery__content .btn--map {
   box-shadow: 0px -11em 0em 11em #dedede;
   color: #dedede;
   background: #dedede;
 }
-.js-click-gallery__btn--map .gallery__map {
+.js-click-btn--map .gallery__content .gallery__map {
   opacity: 1;
   pointer-events: all;
+}
+
+.js-click-dot__btn--photo .popUp {
+  pointer-events: all;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.js-click-dot__btn--photo .popUp .photo {
+  background: #fff;
+  border-radius: 0%;
+  transform: scale(1);
+}
+.js-click-dot__btn--photo .popUp .photo > * {
+  opacity: 1;
+}
+.js-click-dot__btn--photo .popUp .photo.dot--p11 {
+  left: 0%;
 }

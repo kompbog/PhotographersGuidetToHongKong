@@ -89,8 +89,8 @@ html
       //---------------------//
               
       .dot.dot--p11
-        .dot__btn.dot__btn--photo
-          
+        a.dot__btn.dot__btn--photo.dot__btn--p11.SOOOOQA(href="#p11")
+        .dot__btn_target#p11(name="p11")  
       
       .radGrad
       
@@ -105,21 +105,20 @@ html
           .gallery__content
             <iframe class="gallery__map" src="#" frameborder="0" allowfullscreen></iframe>
             .gallery__image
-              img.gallery__image_photo(src="./img/1ShamShuiPo/main.jpg" alt="photo")
+              img.gallery__image_photo(src="./img/1ShamShuiPo/main.jpg" alt="headerPhoto")
               h3.gallery__image_name
               
             p.gallery__description 
               
-            .gallery__btn.gallery__btn--map НА КАРТУ
-          .gallery__btn.gallery__btn--back НАЗАД
+            .btn.btn--map НА КАРТУ
+          .btn.btn--back НАЗАД
     
-      //-.popUp#p11
-          .gallery
-            .gallery__content
-              .gallery__image
-                img.gallery__image_photo.gallery__image_photo--photo(src="./img/1ShamShuiPo/1.jpg", alt="photo")
-              
-            a.gallery__btn.gallery__btn--back(href="#") НАЗАД
+      
+        .photo.dot--p11
+          .photo__content
+            img.photo__image_photo(src="./img/1ShamShuiPo/1.jpg", alt="photo")
+            
+            .btn.btn--back НАЗАД
           
     
     //---------------------//

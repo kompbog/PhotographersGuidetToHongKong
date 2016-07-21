@@ -6,7 +6,44 @@ $('.menuBtn').on('click', function(){
 $('.nav__link').on('click', function(){
   $('html').removeClass('js-click-menuBtn');
 });
-//BTN
+
+//BTN PHOTO
+$('.dot__btn--p11').on('click', function(){
+
+  $('html').toggleClass('js-click-dot__btn--photo');
+
+  $(".photo__image_photo").attr("src", "./img/1ShamShuiPo/1.jpg");
+
+  // $('.photo').toggleClass('js-btnFix2');
+  //   $(".js-btnFix2").css("left", "0%");
+
+});
+// $('.photo').toggleClass('js-btnFix1');
+// $(".js-btnFix1").css("left", "-27%");
+
+//BTN STATION
+  $('.dot__btn--shamShuiPo, .dot__btn--mongKok, .dot__btn--tsimShaTsui, .dot__btn--central').on('click', function(){
+    $('html').toggleClass('js-click-dot__btn--station');
+});
+
+  $('.btn--map').on('click', function(){
+    $('html').toggleClass('js-click-btn--map');
+});
+
+
+//$('.popUp').on('click', function(){
+//  $('html').removeClass('js-click-dot__btn');
+//  $('html').removeClass('js-click-btn--map');
+//});
+
+$('.btn--back').on('click', function(){
+  if ($('html').hasClass('js-click-btn--map')) {
+    $('html').removeClass('js-click-btn--map');
+  } else {
+    $('html').removeClass('js-click-dot__btn--station');
+    $('html').removeClass('js-click-dot__btn--photo');
+  }
+});
 
 $('.dot__btn--shamShuiPo').on('click', function(){
   $(".gallery__image_photo").attr("src", "./img/1ShamShuiPo/main.jpg");
@@ -38,7 +75,7 @@ $('.dot__btn--central').on('click', function(){
 
 
 //ЦЕНТРИРОВАНИЕ ПО ВЫСОТЕ
-$('.dot__btn').on('click', function(){
+$('.dot__btn--shamShuiPo, .dot__btn--mongKok, .dot__btn--tsimShaTsui, .dot__btn--central').on('click', function(){
   function gMapH(){
     var aH = $('.gallery').height();
     var bH = $(window).height();
@@ -50,30 +87,17 @@ $('.dot__btn').on('click', function(){
   $(window).resize(gMapH);
 });
 
-
-  $('.dot__btn').on('click', function(){
-    $('html').toggleClass('js-click-dot__btn');
-});
-
-  $('.gallery__btn--map').on('click', function(){
-    $('html').toggleClass('js-click-gallery__btn--map');
-});
-
-
-//$('.popUp').on('click', function(){
-//  $('html').removeClass('js-click-dot__btn');
-//  $('html').removeClass('js-click-gallery__btn--map');
-//});
-
-$('.gallery__btn--back').on('click', function(){
-  if ($('html').hasClass('js-click-gallery__btn--map')) {
-    $('html').removeClass('js-click-gallery__btn--map');
-
-  } else {
-    $('html').removeClass('js-click-dot__btn');
+$('.dot__btn--p11').on('click', function(){
+  function pMapH(){
+    var aH = $('.photo').height();
+    var bH = $(window).height();
+    var cH = (bH-aH)/2;
+    $(".popUp").css("padding-top", cH +"px");
+    $(".popUp").css("padding-bottom", cH +"px");
   }
+  pMapH();
+  $(window).resize(pMapH);
 });
-
 
 
 //ВЫСОТА ДЛЯ СКРИНА
