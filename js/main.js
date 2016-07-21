@@ -1,6 +1,11 @@
 (function ($) {
-
-
+//NAV
+$('.menuBtn').on('click', function(){
+  $('html').toggleClass('js-click-menuBtn');
+});
+$('.nav__link').on('click', function(){
+  $('html').removeClass('js-click-menuBtn');
+});
 //BTN
 
 $('.dot__btn--shamShuiPo').on('click', function(){

@@ -1,49 +1,49 @@
 //  Nav
 /////////////////////////
 .menuBtn
-  top: .5em
-  left: .5em
+  top: .5rem
+  left: .5rem
   display: block
-  margin: 1em
+  margin: 1rem
   position: fixed
-  width: 2em
-  z-index: 3
+  width: 2rem
+  z-index: 6
 
   &:before
-    width: 2em
+    width: 2rem
     background-color: #808080
     content: ''
     display: block
-    height: 0.3em
+    height: 0.3rem
     transition: all 230ms ease-in-out
 
   &:after
-    width: 2em
+    width: 2rem
     background-color: #808080
     content: ''
     display: block
-    height: 0.3em
+    height: 0.3rem
     transition: all 230ms ease-in-out
 
   &:before
-    box-shadow: 0 0.7215em 0 #808080
-    margin-bottom: 1.143em
+    box-shadow: 0 0.7215rem 0 #808080
+    margin-bottom: 1.143rem
 
   &:after
-    box-shadow: 0 -0.7215em 0 #808080
+    box-shadow: 0 -0.7215rem 0 #808080
     margin-top: 1.143em
 
   &:hover:before
     background-color: #dedede
-    box-shadow: 0 0.786em 0 #dedede
-    transform: translateY(-0.071em)
+    box-shadow: 0 0.786rem 0 #dedede
+    transform: translateY(-0.071rem)
 
   &:hover:after
     background-color: #dedede
     box-shadow: 0 -0.786em 0 #dedede
-    transform: translateY(0.071em)
+    transform: translateY(0.071rem)
 
-.navigation
+.nav
   position: fixed
   bottom: 0
   right: 100%
@@ -52,24 +52,13 @@
   background: #111
   z-index: 5
   text-align: center
-  transition: all 350ms cubic-bezier(0, .6, 1, 1)
+  transition: all 350ms ease-in-out
 
-  li
-    color: rba($cWhite, .8)
+  &__item
     margin: 5em auto
+
+  &__link
+    color: rgba($cWhite, .75)
+    text-decoration: none
     &:hover
       color: rgba($cWhite, 1)
-
-
-//#sideBarMenu
-  display: none
-  &:checked + #site
-    #navigation
-      right: 0
-    #menuBtn
-      &:before
-        box-shadow: 0 0 0 rgba(#111, 0)
-        transform: translateY(10px) rotate(45deg)
-      &:after
-        box-shadow: 0 0 0 rgba(#111, 0)
-        transform: translateY(-10px) rotate(-45deg)
