@@ -1,3 +1,4 @@
+
 //Анимация
 
 .js-click-dot__btn--station
@@ -12,7 +13,13 @@
       transform: scale(1)
       & > *
         opacity: 1
+      &__image
+        &_name
+          opacity: 1
 
+      &__description
+
+        transform: scale(1)
 
 .js-click-btn--map
   .gallery__content
@@ -37,10 +44,9 @@
     background: rgba(#000, .5)
 
     .photo
-      background: #fff
       border-radius: 0%
       transform: scale(1)
-
+      background: rgba($bgBlack, 1)
       left: 0% !important
       & > *
         opacity: 1
