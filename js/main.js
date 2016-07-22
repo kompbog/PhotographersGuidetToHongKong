@@ -9,7 +9,7 @@ $('.nav__link').on('click', function(){
 
 //BTN PHOTO
 
-$('.dot__btn--p11, .dot__btn--p12 .dot__btn--p13,  .dot__btn--p14').on('click', function(){
+$('.dot__btn--p11, .dot__btn--p12').on('click', function(){
   $('html').toggleClass('js-click-dot__btn--photo');
 });
 
@@ -20,11 +20,22 @@ $('.dot__btn--p11').on('click', function(){
 
 $('.dot__btn--p12').on('click', function(){
   $(".photo__image_photo").attr("src", "./img/1ShamShuiPo/2.jpg");
+  $('.photo').css('left', '19%');
 });
 
 
 
-
+$('.dot__btn--p11, .dot__btn--p12, .dot__btn--p13,  .dot__btn--p14').on('click', function(){
+  function pMapH(){
+    var aH = $('.photo').height();
+    var bH = $(window).height();
+    var cH = (bH-aH)/2;
+    $(".popUp").css("padding-top", cH +"px");
+    $(".popUp").css("padding-bottom", cH +"px");
+  }
+  pMapH();
+  $(window).resize(pMapH);
+});
 
 
 
@@ -94,18 +105,6 @@ $('.dot__btn--shamShuiPo, .dot__btn--mongKok, .dot__btn--tsimShaTsui, .dot__btn-
   }
   gMapH();
   $(window).resize(gMapH);
-});
-
-$('.dot__btn--p11, .dot__btn--p12 .dot__btn--p13,  .dot__btn--p14').on('click', function(){
-  function pMapH(){
-    var aH = $('.photo').height();
-    var bH = $(window).height();
-    var cH = (bH-aH)/2;
-    $(".popUp").css("padding-top", cH +"px");
-    $(".popUp").css("padding-bottom", cH +"px");
-  }
-  pMapH();
-  $(window).resize(pMapH);
 });
 
 
